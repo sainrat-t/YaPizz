@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { supabase } from '@/lib/supabase';
 import { Pizza } from '@/components/PizzaMenu';
+import { verifyAdminPassword } from './actions';
 import styles from './Admin.module.css';
 import { ArrowLeft, Plus, Edit2, Trash2 } from 'lucide-react';
 
@@ -29,10 +30,13 @@ export default function AdminPage() {
   const [imageFile, setImageFile] = useState<File | null>(null);
   const [uploadingImage, setUploadingImage] = useState(false);
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simple authentication for MVP (should be replaced with proper auth in production)
-    if (password === 'yapizz2026') {
+    
+    // Vérification sécurisée côté serveur (n'expose pas le mot de passe dans le code public)
+    const isValid = await verifyAdminPassword(password);
+    
+    if (isValid) {
       setIsAuthenticated(true);
       fetchPizzas();
     } else {
