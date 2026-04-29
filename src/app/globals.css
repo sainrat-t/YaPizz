@@ -1,26 +1,81 @@
-@import "tailwindcss";
-
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Couleurs de la charte (extraites des logos) */
+  --primary-color: #762134; /* Bordeaux profond */
+  --secondary-color: #fcc444; /* Or / Jaune chaleureux */
+  --background-color: #faf8f5; /* Blanc cassé très légèrement chaud (pâte à pizza) */
+  --text-color: #3d1c22; /* Brun très sombre au lieu de noir pur */
+  --surface-color: #ffffff;
+  --border-color: #e8dedb;
+  
+  --font-primary: 'Inter', system-ui, sans-serif;
+  --font-display: 'Outfit', system-ui, sans-serif;
+  
+  --border-radius: 16px;
+  --shadow-sm: 0 4px 12px rgba(118, 33, 52, 0.03);
+  --shadow-md: 0 8px 24px rgba(118, 33, 52, 0.08);
+  --shadow-lg: 0 16px 48px rgba(118, 33, 52, 0.12);
+  
+  --transition-speed: 0.4s;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
+/* Dark mode optionnel pour un côté "premium" nocturne, on peut forcer le mode sombre ou l'adapter */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background-color: #121212;
+    --text-color: #f5f5f5;
+    --surface-color: #1e1e1e;
+    --border-color: #333;
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.3);
   }
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-primary);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-speed) ease;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  outline: none;
+}
+
+/* Utilitaires globaux */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--primary-color);
 }

@@ -1,0 +1,280 @@
+.menuSection {
+  background-color: var(--background-color);
+  padding: 6rem 0;
+}
+
+/* Showcase (Pizza du Mois) */
+.showcaseWrapper {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg);
+  padding: 4rem;
+  margin-bottom: 6rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.showcaseContent {
+  flex: 1;
+  position: relative;
+  z-index: 2;
+}
+
+.showcaseEyebrow {
+  display: inline-block;
+  font-family: var(--font-primary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.showcaseTitle {
+  font-family: var(--font-display);
+  font-size: 4rem;
+  color: var(--primary-color);
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+
+.showcaseDesc {
+  font-size: 1.125rem;
+  color: #666;
+  margin-bottom: 2rem;
+  max-width: 90%;
+  line-height: 1.6;
+}
+
+.showcaseIngredients {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--text-color);
+  margin-bottom: 3rem;
+  padding-left: 1.5rem;
+  border-left: 3px solid var(--secondary-color);
+  white-space: pre-line;
+}
+
+.showcaseFooter {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.showcasePrice {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--primary-color);
+}
+
+.showcaseBadge {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.showcaseVisual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.blob {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-image: url('/images/image3.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  animation: morph 8s ease-in-out infinite;
+  box-shadow: var(--shadow-lg);
+  border: 10px solid white;
+}
+
+@keyframes morph {
+  0%, 100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+  34% { border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%; }
+  67% { border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%; }
+}
+
+/* Classic Menu */
+.menuHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.menuSubtitle {
+  font-size: 1.125rem;
+  color: #666;
+  margin-top: -2rem;
+}
+
+.basesContainer {
+  display: flex;
+  gap: 6rem;
+}
+
+.baseColumn {
+  flex: 1;
+}
+
+.baseTitleWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.baseTitle {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.baseTitleDecoration {
+  width: 60px;
+  height: 4px;
+  background-color: var(--secondary-color);
+  border-radius: 2px;
+}
+
+.pizzaList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.pizzaItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.pizzaHeader {
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  margin-bottom: 0.25rem;
+}
+
+.pizzaName {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--text-color);
+  white-space: nowrap;
+}
+
+.dots {
+  flex: 1;
+  border-bottom: 2px dotted #ccc;
+  margin: 0 1rem;
+  position: relative;
+  top: -6px;
+}
+
+.pizzaPrice {
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--primary-color);
+  font-size: 1.25rem;
+  white-space: nowrap;
+}
+
+.pizzaIngredients {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.4;
+  padding-right: 4rem;
+  white-space: pre-line;
+}
+
+@media (max-width: 992px) {
+  .showcaseWrapper {
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .showcaseIngredients {
+    border-left: none;
+    padding-left: 0;
+  }
+  
+  .showcaseFooter {
+    justify-content: center;
+  }
+  
+  .blob {
+    width: 250px;
+    height: 250px;
+    position: relative;
+  }
+  
+  .basesContainer {
+    flex-direction: column;
+    gap: 4rem;
+  }
+  
+  .pizzaIngredients {
+    padding-right: 0;
+  }
+}
+
+/* Organic Legend */
+.legendContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 5rem;
+  padding-top: 2rem;
+  border-top: 1px dashed var(--border-color);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.organicLegend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: #666;
+  font-style: italic;
+}
+
+.legendText {
+  font-size: 0.95rem;
+  color: #666;
+  font-style: italic;
+  text-align: center;
+}
+
+.organicIcon {
+  color: #43a047; /* Un beau vert bio */
+}
+
+.organicIconInline {
+  color: #43a047;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 2px;
+  position: relative;
+  top: -1px;
+}

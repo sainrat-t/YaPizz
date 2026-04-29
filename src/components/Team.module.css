@@ -1,0 +1,94 @@
+.teamSection {
+  background-color: var(--surface-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.teamSection::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background-color: var(--secondary-color);
+  opacity: 0.1;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.teamContainer {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.imageWrapper {
+  flex: 1;
+  position: relative;
+  aspect-ratio: 4/5;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 200px 200px 16px 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.image {
+  object-fit: cover;
+}
+
+.textContent {
+  flex: 1;
+}
+
+.title {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  line-height: 1.1;
+}
+
+.paragraph {
+  font-size: 1.125rem;
+  color: var(--text-color);
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.signatures {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.stamp {
+  opacity: 0.8;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+@media (max-width: 992px) {
+  .teamContainer {
+    flex-direction: column-reverse;
+    gap: 3rem;
+    text-align: center;
+  }
+  
+  .imageWrapper {
+    border-radius: 100px 100px 16px 16px;
+  }
+
+  .signatures {
+    justify-content: center;
+  }
+}
