@@ -33,7 +33,7 @@ export default function Events() {
             </div>
           </div>
 
-          <a href="#footer" className={styles.ctaButton}>
+          <a href="mailto:yapizz.beaujo@gmail.com?subject=Demande de devis pour privatisation Ya'Pizz" className={styles.ctaButton}>
             <Mail size={20} />
             Demander un devis
           </a>
