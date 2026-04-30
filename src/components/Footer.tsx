@@ -11,7 +11,7 @@ export default function Footer() {
             La véritable pizza artisanale en camion, près de chez vous.
           </p>
         </div>
-        
+
         <div className={styles.contact}>
           <h3 className={styles.title}>Contactez-nous</h3>
           <ul className={styles.contactList}>
@@ -27,12 +27,12 @@ export default function Footer() {
             </li>
             <li>
               <span className={styles.contactText}>
-                <MapPin size={18} /> Région de Beaujo
+                <MapPin size={18} /> Beaujolais et alentours
               </span>
             </li>
           </ul>
         </div>
-        
+
         <div className={styles.social}>
           <h3 className={styles.title}>Suivez-nous</h3>
           <div className={styles.socialLinks}>
