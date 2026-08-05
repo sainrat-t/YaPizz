@@ -341,13 +341,13 @@ export default function AdminPage() {
                     checked={formData.is_monthly_special || false} 
                     onChange={(e) => setFormData({...formData, is_monthly_special: e.target.checked})} 
                   />
-                  Pizza du Mois (Mise en avant sur le site)
+                  Pizza du moment (Mise en avant sur le site)
                 </label>
               </div>
 
               {formData.is_monthly_special && (
                 <div className={styles.formGroupImage}>
-                  <label>Photo de la Pizza du Mois</label>
+                  <label>Photo de la Pizza du moment</label>
                   {formData.image_url && !imageFile && (
                     <div style={{ marginBottom: '0.5rem' }}>
                       <img src={formData.image_url} alt="Aperçu" style={{ width: '100px', height: '100px', objectFit: 'cover', borderRadius: '8px' }} />

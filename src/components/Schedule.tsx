@@ -14,7 +14,7 @@ const TourMap = dynamic(() => import('./TourMap'), {
 
 const locationsData = [
   { id: 'mardi', day: 'Mardi', name: 'Quincieux', detail: 'chemin Saint Laurent', time: '17h30 - 21h00', position: [45.912, 4.774] as [number, number], dayIndex: 2, openMin: 17 * 60 + 30, closeMin: 21 * 60 },
-  { id: 'jeudi', day: 'Jeudi', name: 'Chasselay', detail: 'Route de Montluzik', time: '17h30 - 21h00', position: [45.874, 4.733] as [number, number], dayIndex: 4, openMin: 17 * 60 + 30, closeMin: 21 * 60 },
+  { id: 'jeudi', day: 'Jeudi', name: 'Chasselay', detail: 'Route de Montluzik', time: '17h30 - 21h00', position: [45.872667, 4.768722] as [number, number], dayIndex: 4, openMin: 17 * 60 + 30, closeMin: 21 * 60 },
   { id: 'vendredi', day: 'Vendredi', name: "Châtillon d'Azergues", detail: 'Place du 11 novembre', time: '17h30 - 21h00', position: [45.879, 4.646] as [number, number], dayIndex: 5, openMin: 17 * 60 + 30, closeMin: 21 * 60 },
 ];
 

@@ -1,4 +1,3 @@
-import Image from 'next/link'; // Wait, Image is next/image
 import NextImage from 'next/image';
 import styles from './Hero.module.css';
 
@@ -13,7 +12,7 @@ export default function Hero() {
             à votre porte
           </h1>
           <p className={styles.subtitle}>
-            Découvrez Ya'Pizz, votre pizzeria itinérante. Des ingrédients frais, une pâte maison, et un savoir-faire passionné, pour des pizzas qui ont le vrai goût de l'Italie.
+            Ya'Pizz, c'est avant tout une aventure humaine. Sillonnant les vallons du Beaujolais, notre pizzeria itinérante a une mission : vous apporter une véritable pizza napolitaine, là où vous vivez.
           </p>
           <div className={styles.actions}>
             <a href="#menu" className={styles.primaryBtn}>Voir la Carte</a>
@@ -23,8 +22,8 @@ export default function Hero() {
         <div className={styles.imageContent}>
           <div className={styles.imageWrapper}>
             <NextImage 
-              src="/images/image3.jpg" 
-              alt="Pizza artisanale Ya'Pizz" 
+              src="/images/hero-feu-de-bois.jpg" 
+              alt="Pizza artisanale cuite au feu de bois Ya'Pizz" 
               fill
               className={styles.image}
               priority

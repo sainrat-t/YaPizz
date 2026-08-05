@@ -94,7 +94,7 @@ export default async function PizzaMenu() {
         )}
 
         <div className={styles.menuHeader}>
-          <h2 className="section-title">Notre Carte Classique</h2>
+          <h2 className="section-title">Notre Carte</h2>
           <p className={styles.menuSubtitle}>Des pizzas généreuses, une pâte maturée et cuite au feu de bois.</p>
         </div>
         

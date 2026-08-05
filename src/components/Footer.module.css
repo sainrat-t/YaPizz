@@ -79,3 +79,39 @@
   color: #777;
   font-size: 0.875rem;
 }
+
+.bottomContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.soutienText {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.soutienLink {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: color var(--transition-speed);
+}
+
+.soutienLink:hover {
+  color: var(--primary-color);
+}
+
+.llamaIcon {
+  width: 1.15em;
+  height: 1.15em;
+  fill: currentColor;
+  display: inline-block;
+  vertical-align: -0.15em;
+}
