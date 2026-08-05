@@ -16,17 +16,8 @@ export default function Header() {
     <header className={styles.header}>
       <div className={`container ${styles.headerContainer}`}>
         <Link href="/" className={styles.logo} onClick={closeMenu}>
-          <Image src="/images/logo1.png" alt="Ya'Pizz Logo" width={56} height={56} priority />
+          <Image src="/images/logo1.png" alt="Ya'Pizz Logo" width={52} height={52} priority />
         </Link>
-
-        <button 
-          className={styles.menuToggle} 
-          onClick={toggleMenu} 
-          aria-label="Menu"
-          aria-expanded={isOpen}
-        >
-          {isOpen ? <X size={28} /> : <MenuIcon size={28} />}
-        </button>
 
         <nav className={`${styles.nav} ${isOpen ? styles.navOpen : ''}`}>
           <Link href="#menu" className={styles.navLink} onClick={closeMenu}>
@@ -41,10 +32,22 @@ export default function Header() {
           <Link href="#privatisation" className={styles.navLink} onClick={closeMenu}>
             <PartyPopper size={20} /> <span>Privatisation</span>
           </Link>
-          <a href="tel:0624344061" className={styles.cta} onClick={closeMenu}>
-            <Phone size={20} /> <span>Commander</span>
-          </a>
         </nav>
+
+        <div className={styles.rightActions}>
+          <a href="tel:0624344061" className={styles.cta} onClick={closeMenu}>
+            <Phone size={18} /> <span>Commander</span>
+          </a>
+
+          <button 
+            className={styles.menuToggle} 
+            onClick={toggleMenu} 
+            aria-label="Menu"
+            aria-expanded={isOpen}
+          >
+            {isOpen ? <X size={26} /> : <MenuIcon size={26} />}
+          </button>
+        </div>
       </div>
     </header>
   );
