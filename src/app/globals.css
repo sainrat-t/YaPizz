@@ -1,4 +1,6 @@
 :root {
+  color-scheme: light;
+  
   /* Couleurs de la charte (extraites des logos) */
   --primary-color: #762134; /* Bordeaux profond */
   --primary-color-hover: #5c1827;
@@ -22,34 +24,6 @@
   --shadow-lg: 0 16px 48px rgba(118, 33, 52, 0.12);
   
   --transition-speed: 0.4s;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --primary-color: #e85570; /* Bordeaux rouge vif chaleureux et très lisible en mode sombre */
-    --primary-color-hover: #f06a82;
-    --secondary-color: #fcc444;
-    --background-color: #141214;
-    --text-color: #f7f3f4;
-    --text-secondary-color: #c4b8b6;
-    --surface-color: #1f1a1c;
-    --surface-color-secondary: #2b2326;
-    --border-color: #3a2e33;
-    --hero-bg: linear-gradient(135deg, #241418 0%, #141214 100%);
-    --header-bg: rgba(20, 18, 20, 0.92);
-    --header-mobile-bg: rgba(31, 26, 28, 0.98);
-    --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.25);
-    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
-    --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.55);
-  }
-
-  .leaflet-tile {
-    filter: brightness(0.7) invert(0.9) contrast(1.2) hue-rotate(200deg);
-  }
-
-  .leaflet-container {
-    background-color: #141214 !important;
-  }
 }
 
 * {
