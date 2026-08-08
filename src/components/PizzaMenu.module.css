@@ -8,7 +8,8 @@
   display: flex;
   align-items: center;
   gap: 4rem;
-  background: white;
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-lg);
   padding: 4rem;
@@ -44,7 +45,7 @@
 
 .showcaseDesc {
   font-size: 1.125rem;
-  color: #666;
+  color: var(--text-secondary-color);
   margin-bottom: 2rem;
   max-width: 90%;
   line-height: 1.6;
@@ -75,7 +76,7 @@
 
 .showcaseBadge {
   background-color: var(--primary-color);
-  color: white;
+  color: #ffffff;
   padding: 0.5rem 1rem;
   border-radius: 30px;
   font-size: 0.875rem;
@@ -101,7 +102,7 @@
   border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
   animation: morph 8s ease-in-out infinite;
   box-shadow: var(--shadow-lg);
-  border: 10px solid white;
+  border: 10px solid var(--surface-color);
 }
 
 @keyframes morph {
@@ -118,7 +119,7 @@
 
 .menuSubtitle {
   font-size: 1.125rem;
-  color: #666;
+  color: var(--text-secondary-color);
   margin-top: -2rem;
 }
 
@@ -180,7 +181,7 @@
 
 .dots {
   flex: 1;
-  border-bottom: 2px dotted #ccc;
+  border-bottom: 2px dotted var(--border-color);
   margin: 0 1rem;
   position: relative;
   top: -6px;
@@ -195,7 +196,7 @@
 }
 
 .pizzaIngredients {
-  color: #666;
+  color: var(--text-secondary-color);
   font-size: 1rem;
   line-height: 1.4;
   padding-right: 4rem;
@@ -255,13 +256,13 @@
   justify-content: center;
   gap: 0.5rem;
   font-size: 0.95rem;
-  color: #666;
+  color: var(--text-secondary-color);
   font-style: italic;
 }
 
 .legendText {
   font-size: 0.95rem;
-  color: #666;
+  color: var(--text-secondary-color);
   font-style: italic;
   text-align: center;
 }

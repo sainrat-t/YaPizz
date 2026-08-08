@@ -1,6 +1,6 @@
 .hero {
   padding: 6rem 0;
-  background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);
+  background: var(--hero-bg);
   overflow: hidden;
 }
 
@@ -40,7 +40,7 @@
 
 .subtitle {
   font-size: 1.25rem;
-  color: #555;
+  color: var(--text-secondary-color);
   margin-bottom: 2.5rem;
   max-width: 500px;
 }
@@ -60,14 +60,14 @@
 
 .primaryBtn {
   background-color: var(--primary-color);
-  color: white;
+  color: #ffffff;
   box-shadow: var(--shadow-md);
 }
 
 .primaryBtn:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
-  background-color: #d32f2f;
+  background-color: var(--primary-color-hover);
 }
 
 .secondaryBtn {
@@ -95,7 +95,7 @@
   border-radius: 50%;
   overflow: hidden;
   box-shadow: var(--shadow-lg);
-  border: 8px solid white;
+  border: 8px solid var(--surface-color);
 }
 
 .image {

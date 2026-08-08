@@ -20,7 +20,7 @@
 }
 
 .description {
-  color: #666;
+  color: var(--text-secondary-color);
   line-height: 1.6;
 }
 
@@ -41,7 +41,7 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  color: #555;
+  color: var(--text-secondary-color);
 }
 
 .contactLink:hover {
@@ -60,14 +60,14 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background-color: #f5f5f5;
+  background-color: var(--surface-color-secondary);
   color: var(--text-color);
   transition: all var(--transition-speed);
 }
 
 .socialBtn:hover {
   background-color: var(--primary-color);
-  color: white;
+  color: #ffffff;
   transform: translateY(-3px);
 }
 
@@ -76,7 +76,7 @@
   border-top: 1px solid var(--border-color);
   padding: 1.5rem 0;
   text-align: center;
-  color: #777;
+  color: var(--text-secondary-color);
   font-size: 0.875rem;
 }
 

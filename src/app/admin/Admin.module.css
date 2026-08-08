@@ -8,7 +8,8 @@
 }
 
 .loginBox {
-  background: white;
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
   padding: 3rem;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-lg);
@@ -20,7 +21,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: #666;
+  color: var(--text-secondary-color);
   margin-bottom: 2rem;
   font-size: 0.875rem;
   transition: color var(--transition-speed);
@@ -47,6 +48,8 @@
 .input {
   width: 100%;
   padding: 1rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   font-family: inherit;
@@ -67,7 +70,7 @@
 
 .btn {
   background-color: var(--primary-color);
-  color: white;
+  color: #ffffff;
   padding: 1rem;
   border-radius: var(--border-radius);
   font-weight: 600;
@@ -104,7 +107,7 @@
 }
 
 .dashboardSubtitle {
-  color: #666;
+  color: var(--text-secondary-color);
 }
 
 .headerActions {
@@ -118,7 +121,7 @@
   align-items: center;
   gap: 0.5rem;
   background-color: var(--secondary-color);
-  color: white;
+  color: #3d1c22;
   padding: 0.75rem 1.5rem;
   border-radius: var(--border-radius);
   font-weight: 600;
@@ -130,7 +133,8 @@
 }
 
 .tableContainer {
-  background: white;
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-sm);
   overflow-x: auto;
@@ -148,13 +152,14 @@
 }
 
 .table th {
-  background-color: #f9f9f9;
+  background-color: var(--surface-color-secondary);
   font-weight: 600;
-  color: #555;
+  color: var(--text-secondary-color);
 }
 
 .badge {
-  background-color: #eee;
+  background-color: var(--surface-color-secondary);
+  color: var(--text-color);
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
   font-size: 0.875rem;
@@ -162,7 +167,7 @@
 }
 
 .badgeSpecial {
-  background-color: #ffebee;
+  background-color: rgba(232, 85, 112, 0.15);
   color: var(--primary-color);
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
@@ -171,7 +176,7 @@
 }
 
 .badgeNormal {
-  color: #999;
+  color: var(--text-secondary-color);
   font-size: 0.875rem;
 }
 
@@ -187,16 +192,16 @@
   width: 32px;
   height: 32px;
   border-radius: 4px;
-  background-color: #f5f5f5;
+  background-color: var(--surface-color-secondary);
   transition: all var(--transition-speed);
 }
 
 .actionBtnEdit {
-  color: #1976d2;
+  color: #42a5f5;
 }
 
 .actionBtnEdit:hover {
-  background-color: #e3f2fd;
+  background-color: rgba(66, 165, 245, 0.15);
 }
 
 .actionBtnDelete {
@@ -204,7 +209,7 @@
 }
 
 .actionBtnDelete:hover {
-  background-color: #ffebee;
+  background-color: rgba(232, 85, 112, 0.15);
 }
 
 /* Modal Styles */
@@ -214,7 +219,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -223,7 +229,8 @@
 }
 
 .modal {
-  background: white;
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   padding: 2.5rem;
   width: 100%;
@@ -255,11 +262,13 @@
 .formGroup label {
   font-weight: 600;
   font-size: 0.875rem;
-  color: #444;
+  color: var(--text-secondary-color);
 }
 
 .formGroup input, .formGroup textarea, .formGroup select {
   padding: 0.75rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
   border: 1px solid var(--border-color);
   border-radius: 8px;
   font-family: inherit;
@@ -293,7 +302,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  background: #f9f9f9;
+  background: var(--surface-color-secondary);
   padding: 1rem;
   border-radius: 8px;
   border: 1px dashed var(--border-color);
@@ -310,11 +319,11 @@
   padding: 0.75rem 1.5rem;
   border-radius: var(--border-radius);
   font-weight: 600;
-  background: #f5f5f5;
-  color: #333;
+  background: var(--surface-color-secondary);
+  color: var(--text-color);
   transition: background var(--transition-speed);
 }
 
 .btnSecondary:hover {
-  background: #e0e0e0;
+  background: var(--border-color);
 }
