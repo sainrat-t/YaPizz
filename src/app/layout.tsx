@@ -13,8 +13,8 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Ya'Pizz | Pizzeria Itinérante",
-  description: "Retrouvez notre camion à pizzas chaque semaine. Des pizzas artisanales, savoureuses et préparées avec passion.",
+  title: "Ya'Pizz | Pizzas napolitaines de produits bios, locaux et de saison",
+  description: "Pizzas napolitaines de produits bios, locaux et de saison. Retrouvez notre camion chaque semaine dans le Beaujolais.",
   icons: {
     icon: 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍕</text></svg>',
   },

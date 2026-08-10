@@ -12,7 +12,7 @@ export default function Hero() {
             à votre porte
           </h1>
           <p className={styles.subtitle}>
-            Ya'Pizz, c'est avant tout une aventure humaine. Sillonnant les vallons du Beaujolais, notre pizzeria itinérante a une mission : vous apporter une véritable pizza napolitaine, là où vous vivez.
+            Ya'Pizz, c'est avant tout une aventure humaine. Sillonnant les vallons du Beaujolais, notre mission est de vous apporter des pizzas napolitaines de produits bios, locaux et de saison, là où vous vivez.
           </p>
           <div className={styles.actions}>
             <a href="#menu" className={styles.primaryBtn}>Voir la Carte</a>
