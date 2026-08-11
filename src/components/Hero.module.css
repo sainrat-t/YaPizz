@@ -15,9 +15,10 @@
 }
 
 .title {
-  font-size: 4rem;
+  font-size: 3.25rem;
   margin-bottom: 1.5rem;
   color: var(--text-color);
+  line-height: 1.15;
 }
 
 .highlight {
