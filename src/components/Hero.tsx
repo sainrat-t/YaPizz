@@ -9,7 +9,7 @@ export default function Hero() {
           <h1 className={styles.title}>
             Pizzas napolitaines <br />
             au feu de bois <br />
-            <span className={styles.highlight}>bios, locaux et de saison</span>
+            <span className={styles.highlight}>de produits bios, locaux et de saison</span>
           </h1>
           <p className={styles.subtitle}>
             Ya'Pizz, c'est avant tout une aventure humaine. Sillonnant les vallons du Beaujolais, notre mission est de vous apporter des pizzas napolitaines cuites au feu de bois, élaborées avec des produits bios, locaux et de saison, là où vous vivez.
