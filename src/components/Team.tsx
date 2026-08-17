@@ -16,7 +16,7 @@ export default function Team() {
         <div className={styles.textContent}>
           <h2 className={styles.title}>Histoire de terroir</h2>
           <p className={styles.paragraph}>
-            Nous cuisons toutes nos pizzas au feu de bois dans la pure tradition, en privilégiant systématiquement les produits locaux, bios et issus du terroir italien. Chaque ingrédient est sélectionné avec soin pour vous offrir un moment de partage authentique, en respectant les producteur.ices et en privilégiant les circuit courts.
+            Nous cuisons toutes nos pizzas au feu de bois dans la pure tradition, en privilégiant systématiquement les produits locaux, bios et issus du terroir italien. Chaque ingrédient est sélectionné avec soin pour vous offrir un moment de partage authentique, en respectant les producteur.ices et en privilégiant les circuits courts.
           </p>
           <div className={styles.signatures}>
             <Image src="/images/logo1.png" alt="Sceau Ya'Pizz" width={80} height={80} className={styles.stamp} />
