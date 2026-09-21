@@ -71,8 +71,7 @@ export default async function PizzaMenu() {
         {monthlySpecial && (
           <div className={styles.showcaseWrapper}>
             <div className={styles.showcaseContent}>
-              <span className={styles.showcaseEyebrow}>La Pizza du Moment</span>
-              <h3 className={styles.showcaseTitle}>{monthlySpecial.name}</h3>
+              <h3 className={styles.showcaseTitle}>La Pizza du moment</h3>
               <p className={styles.showcaseDesc}>
                 Notre création éphémère. Une recette inédite et savoureuse, imaginée avec les meilleurs produits de saison de notre terroir.
               </p>
