@@ -1,5 +1,7 @@
 'use server';
 
+import { revalidatePath } from 'next/cache';
+
 export async function verifyAdminPassword(password: string): Promise<boolean> {
   const correctPassword = process.env.ADMIN_PASSWORD;
   
@@ -9,4 +11,8 @@ export async function verifyAdminPassword(password: string): Promise<boolean> {
   }
   
   return password === correctPassword;
+}
+
+export async function revalidateSite(): Promise<void> {
+  revalidatePath('/', 'layout');
 }

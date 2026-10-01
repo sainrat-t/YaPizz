@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { supabase } from '@/lib/supabase';
 import { Pizza } from '@/components/PizzaMenu';
-import { verifyAdminPassword } from './actions';
+import { verifyAdminPassword, revalidateSite } from './actions';
 import styles from './Admin.module.css';
 import { ArrowLeft, Plus, Edit2, Trash2 } from 'lucide-react';
 
@@ -85,6 +85,7 @@ export default function AdminPage() {
             alert("Erreur lors de la suppression. Avez-vous désactivé la sécurité RLS ?");
           } else {
             setPizzas(pizzas.filter(p => p.id !== id));
+            await revalidateSite();
           }
         } catch (e) {
           console.error("Delete failed");
@@ -165,6 +166,21 @@ export default function AdminPage() {
       image_url: uploadedImageUrl
     };
 
+    if (formData.is_monthly_special) {
+      // S'assurer qu'aucune autre pizza n'est marquée comme pizza du moment
+      if (editingPizza) {
+        await supabase
+          .from('pizzas')
+          .update({ is_monthly_special: false })
+          .neq('id', editingPizza.id);
+      } else {
+        await supabase
+          .from('pizzas')
+          .update({ is_monthly_special: false })
+          .neq('id', '00000000-0000-0000-0000-000000000000');
+      }
+    }
+
     if (editingPizza) {
       // UPDATE
       const { data, error } = await supabase
@@ -177,7 +193,12 @@ export default function AdminPage() {
         console.error("Update error:", error);
         alert("Erreur lors de la modification. (RLS ?)");
       } else if (data) {
-        setPizzas(pizzas.map(p => p.id === editingPizza.id ? data[0] : p));
+        if (formData.is_monthly_special) {
+          setPizzas(pizzas.map(p => p.id === editingPizza.id ? data[0] : { ...p, is_monthly_special: false }));
+        } else {
+          setPizzas(pizzas.map(p => p.id === editingPizza.id ? data[0] : p));
+        }
+        await revalidateSite();
         closeModal();
       }
     } else {
@@ -191,7 +212,12 @@ export default function AdminPage() {
         console.error("Insert error:", error);
         alert("Erreur lors de l'ajout. (Avez-vous bien désactivé le blocage RLS dans Supabase ?)");
       } else if (data) {
-        setPizzas([...pizzas, data[0]]);
+        if (formData.is_monthly_special) {
+          setPizzas([...pizzas.map(p => ({ ...p, is_monthly_special: false })), data[0]]);
+        } else {
+          setPizzas([...pizzas, data[0]]);
+        }
+        await revalidateSite();
         closeModal();
       }
     }

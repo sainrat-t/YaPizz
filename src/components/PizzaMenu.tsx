@@ -1,4 +1,5 @@
 import { supabase } from '@/lib/supabase';
+import { connection } from 'next/server';
 import { Leaf } from 'lucide-react';
 import styles from './PizzaMenu.module.css';
 
@@ -14,6 +15,8 @@ export type Pizza = {
 };
 
 export default async function PizzaMenu() {
+  await connection();
+
   // Mock data for design purposes
   const MOCK_PIZZAS: Pizza[] = [
     { id: '1', name: 'Margherita', ingredients: 'Tomate, Mozzarella, Origan, Olives', price: 10, base: 'tomate', is_monthly_special: false },
@@ -44,7 +47,9 @@ export default async function PizzaMenu() {
   }
 
   const monthlySpecial = displayPizzas.find(p => p.is_monthly_special);
-  const regularPizzas = displayPizzas.filter(p => !p.is_monthly_special);
+  const regularPizzas = monthlySpecial 
+    ? displayPizzas.filter(p => p.id !== monthlySpecial.id) 
+    : displayPizzas;
   const baseTomate = regularPizzas.filter(p => p.base === 'tomate');
   const baseCreme = regularPizzas.filter(p => p.base === 'creme');
   const baseExtra = regularPizzas.filter(p => p.base === 'extra');
